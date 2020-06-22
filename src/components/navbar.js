@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function NavBar(props) {
+function NavBar({ siteTitle }) {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -100,7 +100,7 @@ function NavBar(props) {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Computer Visions
+            {siteTitle}
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
