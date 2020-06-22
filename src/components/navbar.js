@@ -87,7 +87,7 @@ function NavBar(props) {
       />
       <AppBar
         position="static"
-        style={{ backgroundColor: 'rebeccapurple', color: 'white' }}
+        style={{ backgroundColor: '#314e88', color: 'white' }}
       >
         <Toolbar>
           <IconButton
