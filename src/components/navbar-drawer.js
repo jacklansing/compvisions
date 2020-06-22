@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
+import EventIcon from '@material-ui/icons/Event';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 const useStyles = makeStyles({
@@ -42,19 +43,19 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
             aria-label="home classes"
             className={classes.list}
           >
-            <ListItem button>
+            <ListItemLink href="/">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemLink href="/">Home</ListItemLink>
-            </ListItem>
+              Home
+            </ListItemLink>
             <Divider />
-            <ListItem button>
+            <ListItemLink href="/classes">
               <ListItemIcon>
-                <HomeIcon />
+                <EventIcon />
               </ListItemIcon>
-              <ListItemLink href="/classes">Classes</ListItemLink>
-            </ListItem>
+              Classes
+            </ListItemLink>
           </List>
         </div>
       </Drawer>

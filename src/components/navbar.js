@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar() {
+function NavBar(props) {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -119,3 +119,5 @@ export default function NavBar() {
     </div>
   );
 }
+
+export default NavBar;
