@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Divider from '@material-ui/core/Divider';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
@@ -32,32 +33,34 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
   return (
     <>
       <Drawer variant={'temporary'} anchor={'left'} open={drawerOpen}>
-        <div>
-          <IconButton onClick={handleDrawerClose} role="button">
-            <ChevronLeftIcon />
-            <Typography variant="button">Close</Typography>
-          </IconButton>
-          <Divider />
-          <List
-            component="nav"
-            aria-label="home classes"
-            className={classes.list}
-          >
-            <ListItemLink href="/">
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              Home
-            </ListItemLink>
+        <ClickAwayListener onClickAway={handleDrawerClose}>
+          <div>
+            <IconButton onClick={handleDrawerClose} role="button">
+              <ChevronLeftIcon />
+              <Typography variant="button">Close</Typography>
+            </IconButton>
             <Divider />
-            <ListItemLink href="/classes">
-              <ListItemIcon>
-                <EventIcon />
-              </ListItemIcon>
-              Classes
-            </ListItemLink>
-          </List>
-        </div>
+            <List
+              component="nav"
+              aria-label="home classes"
+              className={classes.list}
+            >
+              <ListItemLink href="/">
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                Home
+              </ListItemLink>
+              <Divider />
+              <ListItemLink href="/classes">
+                <ListItemIcon>
+                  <EventIcon />
+                </ListItemIcon>
+                Classes
+              </ListItemLink>
+            </List>
+          </div>
+        </ClickAwayListener>
       </Drawer>
     </>
   );
