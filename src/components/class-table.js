@@ -2,6 +2,7 @@ import React from 'react';
 import useCSVData from '../hooks/use-csv-data';
 import MaterialTable from 'material-table';
 import tableIcons from '../utils/table-icons';
+import { Button } from '@material-ui/core';
 
 const ClassTable = (props) => {
   const tableData = [];
@@ -29,9 +30,18 @@ const ClassTable = (props) => {
   const data = [...tableData];
 
   return (
-    <div>
+    <div style={{ marginTop: '2rem' }}>
+      <Button
+        component="a"
+        color="primary"
+        variant="contained"
+        href="mailto:vision@compvisions.com"
+        style={{ marginBottom: '1.25rem' }}
+      >
+        Register Now
+      </Button>
       <MaterialTable
-        title="Classes"
+        title="Class Schedule"
         columns={columns}
         data={data}
         icons={tableIcons}
