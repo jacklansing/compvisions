@@ -2,11 +2,25 @@ import React from 'react';
 import useCSVData from '../hooks/use-csv-data';
 import MaterialTable from 'material-table';
 import tableIcons from '../utils/table-icons';
-import { Button } from '@material-ui/core';
+import { Button, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  rowDetails: {
+    padding: '1rem',
+    [theme.breakpoints.down('md')]: {
+      width: '96vw',
+    },
+  },
+}));
 
 const ClassTable = (props) => {
+  const classes = useStyles();
+
+  // Pull data from each each node, and place into tableData array
   const tableData = [];
   useCSVData().forEach((node) => tableData.push(node.class));
+
+  // Column and data definition for material-table
   const columns = [
     {
       title: 'Topic',
@@ -46,7 +60,7 @@ const ClassTable = (props) => {
         data={data}
         icons={tableIcons}
         detailPanel={(rowData) => (
-          <div style={{ padding: `1rem` }}>{rowData.hover_desc}</div>
+          <div className={classes.rowDetails}>{rowData.hover_desc}</div>
         )}
         onRowClick={(event, rowData, togglePanel) => togglePanel()}
       />
