@@ -11,10 +11,14 @@ const useStyles = makeStyles((theme) => ({
   registerButton: {
     marginBottom: '1.25rem',
   },
-  rowDetails: {
+  rowDetailsContainer: {
     padding: '1rem',
-    [theme.breakpoints.down('md')]: {
-      width: '96vw',
+    width: '100%',
+  },
+  rowDetails: {
+    [theme.breakpoints.down('lg')]: {
+      padding: '1rem',
+      maxWidth: '96vw',
     },
   },
 }));
@@ -66,7 +70,9 @@ const ClassTable = (props) => {
         data={data}
         icons={tableIcons}
         detailPanel={(rowData) => (
-          <div className={classes.rowDetails}>{rowData.hover_desc}</div>
+          <div className={classes.rowDetailsContainer}>
+            <div className={classes.rowDetails}>{rowData.hover_desc}</div>
+          </div>
         )}
         onRowClick={(event, rowData, togglePanel) => togglePanel()}
       />

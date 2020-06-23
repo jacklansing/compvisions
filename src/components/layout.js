@@ -13,7 +13,7 @@ import Footer from './footer';
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     width: '80vw',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       width: '96vw',
     },
     marginLeft: 'auto',
