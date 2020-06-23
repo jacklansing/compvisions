@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { navigate } from 'gatsby';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -79,6 +80,14 @@ function NavBar({ siteTitle }) {
     console.log('open state is', drawerOpen);
   };
 
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      navigate('/classes', {
+        state: { searchText: e.target.value },
+      });
+    }
+  };
+
   return (
     <div className={classes.root}>
       <NavBarDrawer
@@ -113,6 +122,7 @@ function NavBar({ siteTitle }) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search classes' }}
+              onKeyPress={(e) => handleSearch(e)}
             />
           </div>
         </Toolbar>

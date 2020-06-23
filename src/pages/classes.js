@@ -3,13 +3,23 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ClassTable from '../components/class-table';
 
-const ClassesPage = (props) => {
+const ClassesPage = ({ location }) => {
   return (
     <Layout>
       <SEO title="classes" />
-      <ClassTable />
+      <ClassTable
+        redirectSearch={location.state ? location.state.searchText : ''}
+      />
     </Layout>
   );
+};
+
+ClassesPage.defaultProps = {
+  location: {
+    state: {
+      searchText: '',
+    },
+  },
 };
 
 export default ClassesPage;

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ClassTable = (props) => {
+const ClassTable = ({ redirectSearch }) => {
   const classes = useStyles();
 
   // Pull data from each each node, and place into tableData array
@@ -75,6 +75,9 @@ const ClassTable = (props) => {
           </div>
         )}
         onRowClick={(event, rowData, togglePanel) => togglePanel()}
+        options={{
+          searchText: redirectSearch.length ? redirectSearch : '',
+        }}
       />
     </div>
   );
