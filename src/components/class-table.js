@@ -5,6 +5,12 @@ import tableIcons from '../utils/table-icons';
 import { Button, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: '2rem',
+  },
+  registerButton: {
+    marginBottom: '1.25rem',
+  },
   rowDetails: {
     padding: '1rem',
     [theme.breakpoints.down('md')]: {
@@ -44,13 +50,13 @@ const ClassTable = (props) => {
   const data = [...tableData];
 
   return (
-    <div style={{ marginTop: '2rem' }}>
+    <div className={classes.root}>
       <Button
         component="a"
         color="primary"
         variant="contained"
         href="mailto:vision@compvisions.com"
-        style={{ marginBottom: '1.25rem' }}
+        className={classes.registerButton}
       >
         Register Now
       </Button>
