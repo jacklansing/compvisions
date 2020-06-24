@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import NavBar from './navbar';
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, showSearch }) => (
   <header
     style={{
       background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
-    <NavBar siteTitle={siteTitle} />
+    <NavBar siteTitle={siteTitle} showSearch={showSearch} />
   </header>
 );
 

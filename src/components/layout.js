@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showSearch = true }) => {
   const classes = useStyles();
 
   const data = useStaticQuery(graphql`
@@ -37,7 +37,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <CssBaseline>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          showSearch={showSearch}
+        />
         <div className={classes.mainContainer}>
           <main>{children}</main>
           <Footer />

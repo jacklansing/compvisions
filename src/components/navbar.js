@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function NavBar({ siteTitle }) {
+function NavBar({ siteTitle, showSearch = true }) {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -111,20 +111,22 @@ function NavBar({ siteTitle }) {
           <Typography className={classes.title} variant="h6" noWrap>
             {siteTitle}
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          {showSearch ? (
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search Classes.."
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search classes' }}
+                onKeyPress={(e) => handleSearch(e)}
+              />
             </div>
-            <InputBase
-              placeholder="Search Classes.."
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search classes' }}
-              onKeyPress={(e) => handleSearch(e)}
-            />
-          </div>
+          ) : null}
         </Toolbar>
       </AppBar>
     </div>

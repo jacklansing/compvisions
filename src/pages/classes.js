@@ -5,7 +5,7 @@ import ClassTable from '../components/class-table';
 
 const ClassesPage = ({ location }) => {
   return (
-    <Layout>
+    <Layout showSearch={false}>
       <SEO title="classes" />
       <ClassTable
         redirectSearch={location.state ? location.state.searchText : ''}
