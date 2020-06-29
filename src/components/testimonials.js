@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'space-around',
     },
   },
+  testimonialHeader: {
+    textAlign: 'center',
+  },
   item: {
     maxWidth: '42ch',
     [theme.breakpoints.up('md')]: {
@@ -42,9 +45,15 @@ const Testimonials = (props) => {
   useTestimonialData().forEach((node) =>
     testimonialData.push(node.testimonial),
   );
-  console.log(testimonialData);
   return (
-    <section>
+    <section style={{ marginTop: theme.spacing(2) }}>
+      <Typography
+        variant="h2"
+        component="h2"
+        className={classes.testimonialHeader}
+      >
+        Why us? Why now?
+      </Typography>
       <List className={classes.root}>
         {showDivider && <Divider variant="fullWidth" component="li" />}
         {testimonialData.map((testimonial) => (
