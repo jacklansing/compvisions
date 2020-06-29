@@ -29,7 +29,7 @@ const useStylesSlide = makeStyles((theme) => ({
     backgroundSize: 'cover',
   },
   container: {
-    marginTop: '5%',
+    marginTop: theme.spacing(5),
   },
   header: {
     textAlign: 'center',
@@ -42,6 +42,7 @@ const useStylesSlide = makeStyles((theme) => ({
       maxWidth: '50%',
       marginLeft: 'auto',
       marginRight: 'auto',
+      marginTop: theme.spacing(1),
     },
   },
   button: {
@@ -49,6 +50,7 @@ const useStylesSlide = makeStyles((theme) => ({
     marginRight: 'auto',
     display: 'block',
     maxWidth: 'fit-content',
+    marginTop: theme.spacing(1),
   },
 }));
 
