@@ -10,7 +10,7 @@ const SatisfactionStep = ({ step, title, children }) => {
         </Typography>
       </Grid>
       <Grid item md={7}>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="p">
           {children}
         </Typography>
       </Grid>

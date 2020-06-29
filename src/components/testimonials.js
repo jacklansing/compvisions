@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   signature: {
     marginTop: theme.spacing(1),
     textAlign: 'right',
+    display: 'block',
   },
 }));
 
@@ -56,8 +57,8 @@ const Testimonials = (props) => {
       </Typography>
       <List className={classes.root}>
         {showDivider && <Divider variant="fullWidth" component="li" />}
-        {testimonialData.map((testimonial) => (
-          <>
+        {testimonialData.map((testimonial, i) => (
+          <React.Fragment key={i}>
             <ListItem
               alignItems="flex-start"
               className={classes.item}
@@ -78,7 +79,7 @@ const Testimonials = (props) => {
                 }
                 secondary={
                   <>
-                    <Typography className={classes.signature}>
+                    <Typography className={classes.signature} component="span">
                       {testimonial.student} - {testimonial.course}
                     </Typography>
                   </>
@@ -86,7 +87,7 @@ const Testimonials = (props) => {
               ></ListItemText>
             </ListItem>
             {showDivider && <Divider variant="fullWidth" component="li" />}
-          </>
+          </React.Fragment>
         ))}
       </List>
     </section>
