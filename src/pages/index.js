@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Test from '../data/pages/index/index2.mdx';
+import HomeCarousel from '../components/home-carousel';
+import Index from '../data/pages/index/index.mdx';
 import Paper from '@material-ui/core/Paper';
 
 const IndexPage = () => {
@@ -9,8 +10,9 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <h1>Home</h1>
+      <HomeCarousel />
       <Paper elevation={3} style={{ padding: '1rem' }}>
-        <Test />
+        <Index />
       </Paper>
     </Layout>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import useCSVData from '../hooks/use-csv-data';
+import useClassData from '../hooks/use-class-data';
 import MaterialTable from 'material-table';
 import tableIcons from '../utils/table-icons';
 import { Button, makeStyles } from '@material-ui/core';
@@ -28,7 +28,7 @@ const ClassTable = ({ redirectSearch }) => {
 
   // Pull data from each each node, and place into tableData array
   const tableData = [];
-  useCSVData().forEach((node) => tableData.push(node.class));
+  useClassData().forEach((node) => tableData.push(node.class));
 
   // Column and data definition for material-table
   const columns = [

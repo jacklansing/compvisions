@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const useCSVData = () => {
+const useClassData = () => {
   const data = useStaticQuery(graphql`
     query {
       allCompvisionsClassesCsv {
@@ -22,4 +22,4 @@ const useCSVData = () => {
   return data.allCompvisionsClassesCsv.edges;
 };
 
-export default useCSVData;
+export default useClassData;
