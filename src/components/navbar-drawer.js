@@ -13,6 +13,8 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import HomeIcon from '@material-ui/icons/Home';
 import EventIcon from '@material-ui/icons/Event';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import BusinessIcon from '@material-ui/icons/Business';
+import ComputerIcon from '@material-ui/icons/Computer';
 
 const useStyles = makeStyles({
   list: {
@@ -57,6 +59,18 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
                   <EventIcon />
                 </ListItemIcon>
                 Classes
+              </ListItemLink>
+              <ListItemLink href="/consulting">
+                <ListItemIcon>
+                  <BusinessIcon />
+                </ListItemIcon>
+                Consulting
+              </ListItemLink>
+              <ListItemLink href="/services">
+                <ListItemIcon>
+                  <ComputerIcon />
+                </ListItemIcon>
+                Services
               </ListItemLink>
             </List>
           </div>
