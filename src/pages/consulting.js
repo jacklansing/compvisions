@@ -17,13 +17,16 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     marginTop: theme.spacing(2),
     fontSize: '1rem',
+    '& span.gatsby-resp-image-wrapper': {
+      marginLeft: '1rem !important',
+    },
   },
 }));
 
 const useConsultImage = () =>
   useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "consult.jpg" }) {
+      file(relativePath: { eq: "consulting/consult.jpg" }) {
         childImageSharp {
           # Specify a fluid image and fragment
           # The default maxWidth is 800 pixels
@@ -64,7 +67,7 @@ const Consulting = () => {
         </Grid>
       </Grid>
       <Paper eleveation={3} className={classes.mainContent}>
-        <ConsultingPageContent styles={classes.mdx} />
+        <ConsultingPageContent />
       </Paper>
     </Layout>
   );
