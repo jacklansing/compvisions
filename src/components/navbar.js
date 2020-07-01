@@ -72,12 +72,10 @@ function NavBar({ siteTitle, showSearch = true }) {
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
-    console.log('hi');
   };
 
   const handleDrawerClose = () => {
     setDrawerOpen(false);
-    console.log('open state is', drawerOpen);
   };
 
   const handleSearch = (e) => {

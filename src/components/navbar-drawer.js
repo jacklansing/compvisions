@@ -15,6 +15,7 @@ import EventIcon from '@material-ui/icons/Event';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import BusinessIcon from '@material-ui/icons/Business';
 import ComputerIcon from '@material-ui/icons/Computer';
+import RoomIcon from '@material-ui/icons/Room';
 
 const useStyles = makeStyles({
   list: {
@@ -71,6 +72,12 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
                   <ComputerIcon />
                 </ListItemIcon>
                 Services
+              </ListItemLink>
+              <ListItemLink href="/directions">
+                <ListItemIcon>
+                  <RoomIcon />
+                </ListItemIcon>
+                Directions
               </ListItemLink>
             </List>
           </div>

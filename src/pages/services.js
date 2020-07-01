@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper, Typography } from '@material-ui/core';
 
 const useServicesImage = () =>
   useStaticQuery(graphql`
@@ -33,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     fontSize: '1rem',
     '& span.gatsby-resp-image-wrapper': {
+      // Make sure any Markdown images added aren't centered
+      // since it's more likely we want them left aligned
       marginLeft: '1rem !important',
     },
   },
@@ -63,11 +65,15 @@ const Services = () => {
           )}
         </Grid>
         <Grid item sm={6} style={{ fontSize: '1rem' }}>
-          <HeadingText />
+          <Typography component="div">
+            <HeadingText />
+          </Typography>
         </Grid>
       </Grid>
       <Paper elevation={3} className={classes.mainContent}>
-        <ServicesPageContent />
+        <Typography component="div">
+          <ServicesPageContent />
+        </Typography>
       </Paper>
     </Layout>
   );

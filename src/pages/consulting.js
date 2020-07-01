@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   mainContent: {
@@ -39,7 +39,7 @@ const useConsultImage = () =>
   `);
 
 const Consulting = () => {
-  const data = useConsultImage();
+  const imageData = useConsultImage();
   const classes = useStyles();
   const theme = useTheme();
   const clipImage = !useMediaQuery(theme.breakpoints.up('md'));
@@ -51,23 +51,27 @@ const Consulting = () => {
         <Grid item sm={6} style={{ width: '100%' }}>
           {clipImage ? (
             <Img
-              fluid={data.file.childImageSharp.fluid}
+              fluid={imageData.file.childImageSharp.fluid}
               alt="Consulting page banner"
               style={{ maxHeight: '125px' }}
             />
           ) : (
             <Img
-              fluid={data.file.childImageSharp.fluid}
+              fluid={imageData.file.childImageSharp.fluid}
               alt="Consulting page banner"
             />
           )}
         </Grid>
         <Grid item sm={6} style={{ fontSize: '1rem' }}>
-          <HeadingText />
+          <Typography component="div">
+            <HeadingText />
+          </Typography>
         </Grid>
       </Grid>
       <Paper eleveation={3} className={classes.mainContent}>
-        <ConsultingPageContent />
+        <Typography component="div">
+          <ConsultingPageContent />
+        </Typography>
       </Paper>
     </Layout>
   );
