@@ -16,6 +16,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import BusinessIcon from '@material-ui/icons/Business';
 import ComputerIcon from '@material-ui/icons/Computer';
 import RoomIcon from '@material-ui/icons/Room';
+import HomeWorkIcon from '@material-ui/icons/HomeWork';
 
 const useStyles = makeStyles({
   list: {
@@ -78,6 +79,12 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
                   <RoomIcon />
                 </ListItemIcon>
                 Directions
+              </ListItemLink>
+              <ListItemLink href="/remote-learning">
+                <ListItemIcon>
+                  <HomeWorkIcon />
+                </ListItemIcon>
+                Remote Learning
               </ListItemLink>
             </List>
           </div>

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ClassTable = ({ redirectSearch }) => {
+const ClassTable = ({ redirectSearch = '' }) => {
   const classes = useStyles();
 
   // Pull data from each each node, and place into tableData array
