@@ -34,13 +34,13 @@ const Directions = () => {
     <Layout>
       <SEO title="Directions" />
       <Grid container spacing={3} className={classes.grid}>
+        <Grid item sm={6}>
+          <DirectionsMap />
+        </Grid>
         <Grid item sm={6} style={{ width: '100%', marginTop: '1.25rem' }}>
           <Typography component="div">
             <HeadingText />
           </Typography>
-        </Grid>
-        <Grid item sm={6}>
-          <DirectionsMap />
         </Grid>
       </Grid>
       <Paper elevation={3} className={classes.mainContent}>

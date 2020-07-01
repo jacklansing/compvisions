@@ -168,22 +168,21 @@ function NavBar({ siteTitle, showSearch = true }) {
               {classicNav()}
             </>
           )}
-          {showSearch ? (
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search Classes.."
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search classes' }}
-                onKeyPress={(e) => handleSearch(e)}
-              />
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
             </div>
-          ) : null}
+            <InputBase
+              placeholder="Search Classes.."
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search classes' }}
+              onKeyPress={(e) => handleSearch(e)}
+              disabled={!showSearch}
+            />
+          </div>
         </Toolbar>
       </AppBar>
     </div>
