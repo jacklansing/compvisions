@@ -39,7 +39,7 @@ const Directions = () => {
             <HeadingText />
           </Typography>
         </Grid>
-        <Grid item sm={6} style={{ fontSize: '1rem' }}>
+        <Grid item sm={6}>
           <DirectionsMap />
         </Grid>
       </Grid>
