@@ -159,22 +159,6 @@ function NavBar({ siteTitle, showSearch = true }) {
               <Typography className={classes.title} variant="h6" noWrap>
                 {siteTitle}
               </Typography>
-              {showSearch ? (
-                <div className={classes.search}>
-                  <div className={classes.searchIcon}>
-                    <SearchIcon />
-                  </div>
-                  <InputBase
-                    placeholder="Search Classes.."
-                    classes={{
-                      root: classes.inputRoot,
-                      input: classes.inputInput,
-                    }}
-                    inputProps={{ 'aria-label': 'search classes' }}
-                    onKeyPress={(e) => handleSearch(e)}
-                  />
-                </div>
-              ) : null}
             </>
           ) : (
             <>
@@ -184,6 +168,22 @@ function NavBar({ siteTitle, showSearch = true }) {
               {classicNav()}
             </>
           )}
+          {showSearch ? (
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search Classes.."
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search classes' }}
+                onKeyPress={(e) => handleSearch(e)}
+              />
+            </div>
+          ) : null}
         </Toolbar>
       </AppBar>
     </div>
