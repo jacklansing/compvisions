@@ -1,4 +1,5 @@
 import React from 'react';
+import ResponsiveHeading from './utils/responsive-heading';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Typography,
@@ -35,9 +36,14 @@ const SatisfactionStep = ({
     <Grid item sm={6}>
       <Card className={classes.root}>
         <div className={classes.iconContainer}>{renderIcon()}</div>
-        <Typography component="h4" variant="h4" className={classes.title}>
+        <ResponsiveHeading
+          component="h3"
+          primary="h4"
+          mobile="h5"
+          className={classes.title}
+        >
           {title}
-        </Typography>
+        </ResponsiveHeading>
         <CardContent className={classes.content}>
           <Typography variant="body1" component="p">
             {children}

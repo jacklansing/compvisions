@@ -9,6 +9,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
+import ResponsiveHeading from './utils/responsive-heading';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,13 +49,9 @@ const Testimonials = (props) => {
   );
   return (
     <section style={{ marginTop: theme.spacing(2) }}>
-      <Typography
-        variant="h2"
-        component="h2"
-        className={classes.testimonialHeader}
-      >
+      <ResponsiveHeading style={{ textAlign: 'center' }}>
         Why us? Why now?
-      </Typography>
+      </ResponsiveHeading>
       <List className={classes.root}>
         {showDivider && <Divider variant="fullWidth" component="li" />}
         {testimonialData.map((testimonial, i) => (

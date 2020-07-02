@@ -1,6 +1,7 @@
-import Typography from '@material-ui/core/Typography';
 import SatisfactionStep from '../../../components/satisfaction-step';
 import SatisfactionStepsContainer from '../../../components/satisfaction-steps-container';
+import ResponsiveHeading from '../../../components/utils/responsive-heading';
+import { Divider } from '@material-ui/core';
 
 import {
   LearningProcessIcon,
@@ -15,13 +16,12 @@ import {
   TrainingGuaranteeIcon,
 } from '../../../components/utils/svg-icons';
 
-<Typography
-  component="h3"
-  variant="h3"
-  style={{ textAlign: 'center', padding: '1rem 0rem 2rem 0rem' }}
+<ResponsiveHeading
+  component="h2"
+  style={{ textAlign: 'center', paddingTop: '1rem', paddingBottom: '1rem' }}
 >
   Our Vision of Satisfaction
-</Typography>
+</ResponsiveHeading>
 
 <SatisfactionStepsContainer>
 

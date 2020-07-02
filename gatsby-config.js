@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Computer Visions`,
-    description: `Computer Visions website example.`,
+    description: `Computer Visions provides training on basic and advanced software applications, leadership, project management, and proprietary software training. We also provide network and technology consulting services.`,
     author: `@jacklansing`,
   },
   plugins: [
