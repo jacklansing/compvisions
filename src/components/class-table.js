@@ -1,7 +1,7 @@
 import React from 'react';
 import useClassData from '../hooks/use-class-data';
 import MaterialTable from 'material-table';
-import tableIcons from '../utils/table-icons';
+import tableIcons from './utils/table-icons';
 import { Button, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
