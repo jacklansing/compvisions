@@ -1,21 +1,50 @@
 import React from 'react';
-import { Typography, Grid, Divider } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Typography,
+  Grid,
+  Divider,
+  Card,
+  CardContent,
+} from '@material-ui/core';
 
-const SatisfactionStep = ({ title, children }) => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    paddingTop: theme.spacing(2),
+    height: '100%',
+  },
+  iconContainer: {
+    textAlign: 'center',
+  },
+  title: {
+    textAlign: 'center',
+  },
+  content: {
+    textAlign: 'center',
+  },
+}));
+
+const SatisfactionStep = ({
+  title = '',
+  renderIcon = () => null,
+  children = null,
+}) => {
+  const classes = useStyles();
+
   return (
-    <>
-      <Grid item md={5}>
-        <Typography component="h4" variant="h4">
+    <Grid item sm={6}>
+      <Card className={classes.root}>
+        <div className={classes.iconContainer}>{renderIcon()}</div>
+        <Typography component="h4" variant="h4" className={classes.title}>
           {title}
         </Typography>
-        <Divider />
-      </Grid>
-      <Grid item md={7}>
-        <Typography variant="body1" component="p">
-          {children}
-        </Typography>
-      </Grid>
-    </>
+        <CardContent className={classes.content}>
+          <Typography variant="body1" component="p">
+            {children}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Grid>
   );
 };
 

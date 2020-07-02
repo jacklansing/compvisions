@@ -22,9 +22,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <HomeCarousel />
       <Testimonials />
-      <Paper elevation={3} className={classes.root}>
-        <Index />
-      </Paper>
+      <Index />
     </Layout>
   );
 };

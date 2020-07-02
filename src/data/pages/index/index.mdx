@@ -2,6 +2,19 @@ import Typography from '@material-ui/core/Typography';
 import SatisfactionStep from '../../../components/satisfaction-step';
 import SatisfactionStepsContainer from '../../../components/satisfaction-steps-container';
 
+import {
+  LearningProcessIcon,
+  CertifiedTrainersIcon,
+  QualityTrainingMaterialsIcon,
+  FreeCourseRetakesIcon,
+  ComputerTimeIcon,
+  ConvenientLocationIcon,
+  TrainingAtYourLocationIcon,
+  ClassSizeIcon,
+  HelpDeskFreeIcon,
+  TrainingGuaranteeIcon,
+} from '../../../components/utils/svg-icons';
+
 <Typography
   component="h3"
   variant="h3"
@@ -12,7 +25,7 @@ import SatisfactionStepsContainer from '../../../components/satisfaction-steps-c
 
 <SatisfactionStepsContainer>
 
-<SatisfactionStep title="The Learning Process">
+<SatisfactionStep title="The Learning Process" renderIcon={LearningProcessIcon}>
   Learning in and beyond the classroom is the focus of Computer Visions'
   training. Effective classroom training provides increased ROI (Return on
   Investment) when learning continues outside of the classroom. Computer Visions
@@ -20,7 +33,7 @@ import SatisfactionStepsContainer from '../../../components/satisfaction-steps-c
   growth.
 </SatisfactionStep>
 
-<SatisfactionStep title="Certified Trainers">
+<SatisfactionStep title="Certified Trainers" renderIcon={CertifiedTrainersIcon}>
   At Computer Visions you will never walk into a classroom to be greeted by a
   television screen. You will always have a trainer with you in the classroom
   when you join us for class! Computer Visions’ trainers are not only
@@ -29,46 +42,58 @@ import SatisfactionStepsContainer from '../../../components/satisfaction-steps-c
   users.” Best of all, they truly make learning fun!
 </SatisfactionStep>
 
-<SatisfactionStep title="Quality Training Materials">
+<SatisfactionStep
+  title="Quality Training Materials"
+  renderIcon={QualityTrainingMaterialsIcon}
+>
   Computer Visions provides each student with a manual developed for
   instructor-led training. The course materials are userfriendly and provide
   easy reference when needed. Each manual includes documented concepts, hands-on
   activities and quick tips.
 </SatisfactionStep>
 
-<SatisfactionStep title="Free Course Retakes">
+<SatisfactionStep
+  title="Free Course Retakes"
+  renderIcon={FreeCourseRetakesIcon}
+>
   Students can take FREE refresher courses to further the “beyond the classroom”
   learning process with the opportunity to refresh the skills they learned in
   class.
 </SatisfactionStep>
 
-<SatisfactionStep title="Computer Time">
+<SatisfactionStep title="Computer Time" renderIcon={ComputerTimeIcon}>
   FREE, unlimited technical support Monday through Friday. Whether by email
   (vision@compvisions. com) or phone (518-437-1600), the answer to your
   technical or general question is right at hand.
 </SatisfactionStep>
 
-<SatisfactionStep title="Convenient Location">
+<SatisfactionStep
+  title="Convenient Location"
+  renderIcon={ConvenientLocationIcon}
+>
   Corporate Woods (exit 5A off I90) provides easy access from the Northway, the
   Thruway, and I-787. The best places for lunch are only minutes away
 </SatisfactionStep>
 
-<SatisfactionStep title="Training at YOUR Location">
+<SatisfactionStep
+  title="Training at YOUR Location"
+  renderIcon={TrainingAtYourLocationIcon}
+>
   Computer Visions can provide its excellent training at your location.
   Effective classroom learning in familiar surroundings!
 </SatisfactionStep>
 
-<SatisfactionStep title="Class Size">
+<SatisfactionStep title="Class Size" renderIcon={ClassSizeIcon}>
   We ensure training integrity with small class sizes. No gimmicks can replace
   personal interactions to facilitate the learning process.
 </SatisfactionStep>
 
-<SatisfactionStep title="Help Desk: FREE">
+<SatisfactionStep title="Help Desk: FREE" renderIcon={HelpDeskFreeIcon}>
   We will price match competitors’ pricing for a private class. Contact us to
   get the best pricing possible for your training needs!
 </SatisfactionStep>
 
-<SatisfactionStep title="Training Guarantee">
+<SatisfactionStep title="Training Guarantee" renderIcon={TrainingGuaranteeIcon}>
   When all is said and done, Computer Visions guarantees customer satisfaction!
 </SatisfactionStep>
 

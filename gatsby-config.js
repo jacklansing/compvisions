@@ -64,6 +64,14 @@ module.exports = {
     },
     `gatsby-transformer-csv`,
     `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /svgicons/,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
