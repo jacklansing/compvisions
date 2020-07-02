@@ -69,6 +69,18 @@ module.exports = {
       options: {
         rule: {
           include: /svgicons/,
+          omitKeys: [
+            'xmlnsDc',
+            'xmlnsCc',
+            'xmlnsRdf',
+            'xmlnsSvg',
+            'xmlnsSodipodi',
+            'xmlnsInkscape',
+            'xmlnsGraph',
+            'xmlnsI',
+            'xmlnsX',
+            'iExtraneous',
+          ],
         },
       },
     },
