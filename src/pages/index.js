@@ -12,6 +12,29 @@ const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(4),
   },
+  gradient: {
+    [theme.breakpoints.up('md')]: {
+      position: 'relative',
+      '&:before': {
+        background: 'linear-gradient(315deg, #6177b7, white)',
+        content: '""',
+        height: '100%',
+        left: '-25%',
+        position: 'absolute',
+        top: '-3%',
+        transform: 'rotate(-5deg)',
+        transformOrigin: 'left top',
+        width: '170%',
+        zIndex: '-1',
+      },
+    },
+    [theme.breakpoints.up('xl')]: {
+      '&:before': {
+        height: '100%',
+        top: '0%',
+      },
+    },
+  },
 }));
 
 const IndexPage = () => {
@@ -22,7 +45,9 @@ const IndexPage = () => {
       <SEO title="Home" />
       <HomeCarousel />
       <Testimonials />
-      <Index />
+      <div className={classes.gradient}>
+        <Index />
+      </div>
     </Layout>
   );
 };

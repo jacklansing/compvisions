@@ -12,7 +12,7 @@ const SatisfactionStepsContainer = ({ children }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid container spacing={3} className={classes.gridList}>
+      <Grid container spacing={3}>
         {children}
       </Grid>
     </div>

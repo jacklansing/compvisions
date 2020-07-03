@@ -11,6 +11,9 @@ import ClassSize from '../../images/svgicons/class_size.svg';
 import HelpDeskFree from '../../images/svgicons/help_desk_free.svg';
 import TrainingGuarantee from '../../images/svgicons/training_guarantee.svg';
 
+// Helps these icons to behave when passed as a prop to a
+// React Component used inside MDX
+
 export function LearningProcessIcon() {
   return <TheLearningProcess />;
 }
