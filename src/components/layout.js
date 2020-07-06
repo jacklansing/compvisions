@@ -5,8 +5,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from './header';
@@ -31,8 +29,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Layout = ({ children, showSearch = true }) => {
   const classes = useStyles();
-  const theme = useTheme();
-  const showPreHeader = useMediaQuery(theme.breakpoints.up('md'));
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -46,7 +42,7 @@ const Layout = ({ children, showSearch = true }) => {
   return (
     <>
       <CssBaseline>
-        {showPreHeader && <PreHeader />}
+        <PreHeader />
         <Header
           siteTitle={data.site.siteMetadata.title}
           showSearch={showSearch}

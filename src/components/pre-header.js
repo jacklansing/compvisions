@@ -7,6 +7,9 @@ import CallIcon from '@material-ui/icons/Call';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   list: {
     listStyle: 'none',
@@ -26,10 +29,9 @@ const PreHeader = (props) => {
   return (
     <Typography component="div" className={classes.root}>
       <ul className={classes.list}>
-        <li className={classes.listItem}>16 Corporate Woods Boulevard,</li>
-        <li className={classes.listItem}>Albany, NY 12211</li>
-      </ul>
-      <ul className={classes.list}>
+        <li className={classes.listItem}>
+          16 Corporate Woods Boulevard, Albany, NY 12211
+        </li>
         <li className={classes.listItem}>
           <a href="tel:(518) 437-1600">
             <CallIcon

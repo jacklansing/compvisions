@@ -23,7 +23,7 @@ const HomeCarousel = (props) => {
 const useStylesSlide = makeStyles((theme) => ({
   root: {
     padding: '1rem',
-    minHeight: '350px',
+    minHeight: '370px',
     backgroundImage: `url(${CarouselBackground})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
