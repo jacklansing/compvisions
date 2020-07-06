@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import './layout.css';
 
 import Header from './header';
 import Footer from './footer';
@@ -19,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: 'auto',
     marginRight: 'auto',
+  },
+  '@global': {
+    html: {
+      overflowX: 'hidden',
+    },
   },
 }));
 
