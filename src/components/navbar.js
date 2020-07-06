@@ -91,7 +91,7 @@ function NavBar({ siteTitle, showSearch = true }) {
 
   const classes = useStyles();
   const theme = useTheme();
-  const showBurgerNav = !useMediaQuery(theme.breakpoints.up('md'));
+  const showBurgerNav = !useMediaQuery(theme.breakpoints.up('lg'));
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
