@@ -31,10 +31,15 @@ const Footer = (props) => {
     <footer className={classes.root}>
       <div className={classes.container}>
         <div className={classes.socialContainer}>
-          <IconButton component="a" href="https://www.facebook.com/Compvisions">
+          <IconButton
+            aria-label="facebook link"
+            component="a"
+            href="https://www.facebook.com/Compvisions"
+          >
             <FacebookIcon className={classes.social} />
           </IconButton>
           <IconButton
+            aria-label="linkedin link"
             component="a"
             href="https://www.linkedin.com/company/computer-visions-llc/about/"
           >

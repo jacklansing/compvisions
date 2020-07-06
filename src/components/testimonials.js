@@ -3,9 +3,7 @@ import useTestimonialData from '../hooks/use-testimonial-data';
 
 import { makeStyles, ListItem, Card } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
@@ -26,8 +24,14 @@ const useStyles = makeStyles((theme) => ({
   },
   item: {
     maxWidth: '42ch',
+    padding: theme.spacing(3),
+    [theme.breakpoints.down('md')]: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginBottom: theme.spacing(2),
+    },
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(3),
+      height: '100%',
     },
   },
   signature: {
@@ -40,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
 const Testimonials = (props) => {
   const classes = useStyles();
   const theme = useTheme();
-  const showDivider = !useMediaQuery(theme.breakpoints.up('md'));
 
   // Pull data from each each node, and place into testimonialData array
   const testimonialData = [];
@@ -53,37 +56,36 @@ const Testimonials = (props) => {
         Why us? Why now?
       </ResponsiveHeading>
       <List className={classes.root}>
-        {showDivider && <Divider variant="fullWidth" component="li" />}
         {testimonialData.map((testimonial, i) => (
           <React.Fragment key={i}>
-            <ListItem
-              alignItems="flex-start"
-              className={classes.item}
-              component={showDivider ? 'li' : Card}
-            >
-              <ListItemText
-                primary={
-                  <>
-                    <Typography>
-                      <FormatQuoteIcon
-                        fontSize="inherit"
-                        style={{ transform: 'scaleX(-1)' }}
-                      />
-                      {testimonial.quote}
-                      <FormatQuoteIcon fontSize="inherit" />
-                    </Typography>
-                  </>
-                }
-                secondary={
-                  <>
-                    <Typography className={classes.signature} component="span">
-                      {testimonial.student} - {testimonial.course}
-                    </Typography>
-                  </>
-                }
-              ></ListItemText>
+            <ListItem alignItems="flex-start">
+              <Card className={classes.item}>
+                <ListItemText
+                  primary={
+                    <>
+                      <Typography>
+                        <FormatQuoteIcon
+                          fontSize="inherit"
+                          style={{ transform: 'scaleX(-1)' }}
+                        />
+                        {testimonial.quote}
+                        <FormatQuoteIcon fontSize="inherit" />
+                      </Typography>
+                    </>
+                  }
+                  secondary={
+                    <>
+                      <Typography
+                        className={classes.signature}
+                        component="span"
+                      >
+                        {testimonial.student} - {testimonial.course}
+                      </Typography>
+                    </>
+                  }
+                ></ListItemText>
+              </Card>
             </ListItem>
-            {showDivider && <Divider variant="fullWidth" component="li" />}
           </React.Fragment>
         ))}
       </List>

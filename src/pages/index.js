@@ -5,7 +5,6 @@ import HomeCarousel from '../components/home-carousel';
 import Index from '../data/pages/index/index.mdx';
 import Testimonials from '../components/testimonials';
 
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({

@@ -3,8 +3,9 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ClassTable from '../components/class-table';
 import ResponsiveHeading from '../components/utils/responsive-heading';
+import HeadingText from '../data/pages/classes/heading-text.mdx';
 
-import { Paper, Typography, Divider } from '@material-ui/core';
+import { Typography, Divider } from '@material-ui/core';
 
 const ClassesPage = ({ location }) => {
   return (
@@ -12,6 +13,9 @@ const ClassesPage = ({ location }) => {
       <ResponsiveHeading>Classes</ResponsiveHeading>
       <SEO title="classes" />
       <Divider />
+      <Typography component="div">
+        <HeadingText />
+      </Typography>
       <ClassTable
         redirectSearch={location.state ? location.state.searchText : ''}
       />

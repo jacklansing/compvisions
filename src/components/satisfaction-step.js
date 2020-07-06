@@ -1,13 +1,7 @@
 import React from 'react';
 import ResponsiveHeading from './utils/responsive-heading';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-  Typography,
-  Grid,
-  Divider,
-  Card,
-  CardContent,
-} from '@material-ui/core';
+import { Typography, Grid, Card, CardContent } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
