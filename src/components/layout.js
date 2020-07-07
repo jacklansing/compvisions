@@ -42,11 +42,11 @@ const Layout = ({ children, showSearch = true }) => {
   return (
     <>
       <CssBaseline>
-        <PreHeader />
         <Header
           siteTitle={data.site.siteMetadata.title}
           showSearch={showSearch}
         />
+        <PreHeader />
         <div className={classes.mainContainer}>
           <main>{children}</main>
           <Footer />

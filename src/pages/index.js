@@ -2,9 +2,10 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HomeCarousel from '../components/home-carousel';
-import Index from '../data/pages/index/index.mdx';
+import PartnerLogos from '../components/partner-logos';
 import Testimonials from '../components/testimonials';
 
+import Index from '../data/pages/index/index.mdx';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -47,6 +48,7 @@ const IndexPage = () => {
       <div className={classes.gradient}>
         <Index />
       </div>
+      <PartnerLogos />
     </Layout>
   );
 };
