@@ -11,8 +11,7 @@ import InputBase from '@material-ui/core/InputBase';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { fade, makeStyles, useTheme } from '@material-ui/core/styles';
+import { fade, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up('lg')]: {
+      display: 'none',
+    },
   },
   title: {
     flexGrow: 1,
@@ -81,9 +83,23 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: '500',
     },
     '& li': {
+      position: 'relative',
       padding: theme.spacing(1),
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
+    },
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
+  activeLink: {
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 3,
+      left: 0,
+      width: '100%',
+      borderBottom: '2px solid white',
     },
   },
 }));
@@ -92,8 +108,6 @@ function NavBar({ siteTitle, showSearch = true }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const classes = useStyles();
-  const theme = useTheme();
-  const showBurgerNav = !useMediaQuery(theme.breakpoints.up('lg'));
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
@@ -115,22 +129,34 @@ function NavBar({ siteTitle, showSearch = true }) {
     <nav>
       <Typography component="ul" className={classes.classicNav}>
         <li>
-          <Link to="/">Home</Link>
+          <Link activeClassName={classes.activeLink} to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/classes">Classes</Link>
+          <Link activeClassName={classes.activeLink} to="/classes">
+            Classes
+          </Link>
         </li>
         <li>
-          <Link to="/consulting">Consulting</Link>
+          <Link activeClassName={classes.activeLink} to="/consulting">
+            Consulting
+          </Link>
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <Link activeClassName={classes.activeLink} to="/services">
+            Services
+          </Link>
         </li>
         <li>
-          <Link to="/directions">Directions</Link>
+          <Link activeClassName={classes.activeLink} to="/directions">
+            Directions
+          </Link>
         </li>
         <li>
-          <Link to="/remote-learning">Remote Learning</Link>
+          <Link activeClassName={classes.activeLink} to="/remote-learning">
+            Remote Learning
+          </Link>
         </li>
       </Typography>
     </nav>
@@ -147,29 +173,19 @@ function NavBar({ siteTitle, showSearch = true }) {
         style={{ backgroundColor: '#314e88', color: 'white' }}
       >
         <Toolbar>
-          {showBurgerNav ? (
-            <>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerOpen}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography className={classes.title} variant="h6" noWrap>
-                {siteTitle}
-              </Typography>
-            </>
-          ) : (
-            <>
-              <Typography className={classes.title} variant="h6" noWrap>
-                {siteTitle}
-              </Typography>
-              {classicNav()}
-            </>
-          )}
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography className={classes.title} variant="h6" noWrap>
+            {siteTitle}
+          </Typography>
+          {classicNav()}
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
