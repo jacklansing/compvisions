@@ -46,9 +46,7 @@ const Footer = (props) => {
             <LinkedInIcon className={classes.social} />
           </IconButton>
         </div>
-        © {new Date().getFullYear()} Computer Visions, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        © {new Date().getFullYear()} Computer Visions, All Rights Reserved.
       </div>
     </footer>
   );

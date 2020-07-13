@@ -77,6 +77,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     '& a': {
       color: 'white',
+      textDecoration: 'none',
+      fontWeight: '500',
     },
     '& li': {
       padding: theme.spacing(1),
