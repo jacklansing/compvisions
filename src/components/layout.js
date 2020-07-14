@@ -15,7 +15,9 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     width: '80vw',
     [theme.breakpoints.down('md')]: {
-      width: '96vw',
+      width: 'fit-content',
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(2),
     },
     marginLeft: 'auto',
     marginRight: 'auto',
