@@ -55,12 +55,13 @@ const Services = () => {
             <Img
               fluid={imageData.file.childImageSharp.fluid}
               alt="Students using computers"
-              style={{ maxHeight: '100px' }}
+              style={{ maxHeight: '125px', boxShadow: theme.shadows[2] }}
             />
           ) : (
             <Img
               fluid={imageData.file.childImageSharp.fluid}
               alt="Students using computers"
+              style={{ boxShadow: theme.shadows[5] }}
             />
           )}
         </Grid>

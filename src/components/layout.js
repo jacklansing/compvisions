@@ -51,8 +51,8 @@ const Layout = ({ children, showSearch = true }) => {
         <PreHeader />
         <div className={classes.mainContainer}>
           <main>{children}</main>
-          <Footer />
         </div>
+        <Footer />
       </CssBaseline>
     </>
   );

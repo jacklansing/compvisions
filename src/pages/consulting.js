@@ -53,12 +53,13 @@ const Consulting = () => {
             <Img
               fluid={imageData.file.childImageSharp.fluid}
               alt="Consulting page banner"
-              style={{ maxHeight: '125px' }}
+              style={{ maxHeight: '125px', boxShadow: theme.shadows[2] }}
             />
           ) : (
             <Img
               fluid={imageData.file.childImageSharp.fluid}
               alt="Consulting page banner"
+              style={{ boxShadow: theme.shadows[5] }}
             />
           )}
         </Grid>

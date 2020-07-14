@@ -6,6 +6,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '2rem',
+    backgroundColor: theme.palette.grey[200],
   },
   container: {
     width: 'fit-content',
