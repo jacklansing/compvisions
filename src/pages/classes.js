@@ -11,7 +11,7 @@ const ClassesPage = ({ location }) => {
   return (
     <Layout showSearch={false}>
       <ResponsiveHeading>Classes</ResponsiveHeading>
-      <SEO title="classes" />
+      <SEO title="Classes" />
       <Divider />
       <Typography component="div">
         <HeadingText />

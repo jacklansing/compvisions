@@ -15,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
       minHeight: '350px',
     },
   },
+  mapGridItem: {
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
+  },
   mainContent: {
     padding: theme.spacing(2),
     marginTop: theme.spacing(2),
@@ -34,7 +39,7 @@ const Directions = () => {
     <Layout>
       <SEO title="Directions" />
       <Grid container spacing={3} className={classes.grid}>
-        <Grid item sm={6}>
+        <Grid item sm={6} className={classes.mapGridItem}>
           <DirectionsMap />
         </Grid>
         <Grid item sm={6} style={{ width: '100%', marginTop: '1.25rem' }}>
