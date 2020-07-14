@@ -44,6 +44,10 @@ function SEO({ description, lang, meta, title }) {
           content: `#314e88`,
         },
         {
+          name: `apple-mobile-web-app-status-bar-style`,
+          content: `#314e88`,
+        },
+        {
           property: `og:title`,
           content: title,
         },

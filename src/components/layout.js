@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       width: 'fit-content',
       marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
     },
     marginLeft: 'auto',
     marginRight: 'auto',
