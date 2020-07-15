@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
   },
   titleIcon: {
     marginRight: theme.spacing(1),
+    visibility: 'hidden',
+    [theme.breakpoints.up('sm')]: {
+      visibility: 'visible',
+    },
   },
   search: {
     position: 'relative',
