@@ -68,7 +68,7 @@ const Footer = (props) => {
     <footer className={classes.root}>
       <div className={classes.container}>
         <Typography component="div" className={classes.child}>
-          <Typography variant="h6">Navigation</Typography>
+          <Typography variant="h6">Computer Visions</Typography>
           <nav>
             <ul className={classes.bottomNav}>
               <li>
