@@ -20,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-evenly',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       flexFlow: 'column wrap',
     },
   },
   child: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       alignSelf: 'center',
       textAlign: 'center',
       width: 'fit-content',
