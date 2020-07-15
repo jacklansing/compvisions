@@ -12,7 +12,7 @@ const HomeCarousel = (props) => {
   useCarouselData().forEach((node) => carouselData.push(node.slide));
 
   return (
-    <Carousel autoPlay={true} interval={10000} animation="slide">
+    <Carousel autoPlay={true} interval={10000} animation="fade">
       {carouselData.map((slide, i) => (
         <Slide slide={slide} key={i} />
       ))}
