@@ -33,7 +33,8 @@ const useStylesSlide = makeStyles((theme) => ({
   },
   header: {
     textAlign: 'center',
-    color: '#627ab8',
+    color: 'white',
+    textShadow: '-1px 2px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000',
   },
   body: {
     textAlign: 'center',
