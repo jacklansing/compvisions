@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { navigate, Link } from 'gatsby';
 
 import NavBarDrawer from './navbar-drawer';
+import { FullMoonIcon } from './utils/svg-icons';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -29,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    textTransform: 'uppercase',
+  },
+  titleIcon: {
+    marginRight: theme.spacing(1),
   },
   search: {
     position: 'relative',
@@ -182,6 +187,7 @@ function NavBar({ siteTitle, showSearch = true }) {
           >
             <MenuIcon />
           </IconButton>
+          <FullMoonIcon className={classes.titleIcon} />
           <Typography className={classes.title} variant="h6" noWrap>
             {siteTitle}
           </Typography>
