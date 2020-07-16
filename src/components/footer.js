@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     paddingTop: theme.spacing(3),
     backgroundColor: theme.palette.grey[200],
+    borderTop: `1px solid ${theme.palette.grey[400]}`,
   },
   container: {
     width: 'inherit',

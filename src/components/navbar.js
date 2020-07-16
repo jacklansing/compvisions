@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     display: 'none',
+    paddingTop: '5px',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
