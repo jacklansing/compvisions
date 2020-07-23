@@ -58,7 +58,11 @@ const useStyles = makeStyles((theme) => ({
     },
     '& a': {
       textDecoration: 'none',
+      color: '#00275a',
     },
+  },
+  contactLink: {
+    color: '#00275a',
   },
 }));
 
@@ -101,14 +105,17 @@ const Footer = (props) => {
             Albany, NY 12211
           </p>
           <p>
-            <a href="tel:(518) 437-1600">
+            <a className={classes.contactLink} href="tel:(518) 437-1600">
               <CallIcon
                 style={{ verticalAlign: 'middle', paddingRight: '0.1rem' }}
               />
               {'(518) 437-1600'}
             </a>
             <br />
-            <a href="mailto:vision@compvisions.com">
+            <a
+              className={classes.contactLink}
+              href="mailto:vision@compvisions.com"
+            >
               <EmailIcon
                 style={{ verticalAlign: 'middle', paddingRight: '0.1rem' }}
               />
