@@ -1,7 +1,19 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  desktop: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+  mobile: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+}));
 
 const ResponsiveHeading = ({
   children,
@@ -10,16 +22,26 @@ const ResponsiveHeading = ({
   mobile = 'h4',
   ...props
 }) => {
-  const theme = useTheme();
-  const reduceToMobile = !useMediaQuery(theme.breakpoints.up('md'));
+  const classes = useStyles();
   return (
-    <Typography
-      component={component}
-      variant={reduceToMobile ? mobile : primary}
-      {...props}
-    >
-      {children}
-    </Typography>
+    <>
+      <Typography
+        component={component}
+        variant={primary}
+        className={classes.desktop}
+        {...props}
+      >
+        {children}
+      </Typography>
+      <Typography
+        component={component}
+        variant={mobile}
+        {...props}
+        className={classes.mobile}
+      >
+        {children}
+      </Typography>
+    </>
   );
 };
 
