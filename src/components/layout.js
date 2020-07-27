@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       overflowX: 'hidden',
     },
     a: {
-      color: '#00275a',
+      color: theme.palette.primary.dark,
     },
   },
 }));

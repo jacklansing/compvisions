@@ -188,10 +188,7 @@ function NavBar({ siteTitle, showSearch = true }) {
         drawerOpen={drawerOpen}
         handleDrawerClose={handleDrawerClose}
       />
-      <AppBar
-        position="static"
-        style={{ backgroundColor: '#314e88', color: 'white' }}
-      >
+      <AppBar position="static" style={{ color: 'white' }}>
         <Toolbar>
           <IconButton
             edge="start"

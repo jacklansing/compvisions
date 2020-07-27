@@ -58,11 +58,11 @@ const useStyles = makeStyles((theme) => ({
     },
     '& a': {
       textDecoration: 'none',
-      color: '#00275a',
+      color: theme.palette.primary.dark,
     },
   },
   contactLink: {
-    color: '#00275a',
+    color: theme.palette.primary.dark,
   },
 }));
 
