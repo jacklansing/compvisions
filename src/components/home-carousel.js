@@ -71,6 +71,7 @@ const Slide = ({ slide }) => {
             component="a"
             color="primary"
             variant="contained"
+            size="large"
             href={slide.link}
             className={classes.button}
           >
