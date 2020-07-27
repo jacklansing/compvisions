@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   mapGridItem: {
     [theme.breakpoints.down('md')]: {
       width: '100%',
+      marginBottom: '1.25rem',
     },
   },
   mainContent: {
@@ -42,7 +43,7 @@ const Directions = () => {
         <Grid item sm={6} className={classes.mapGridItem}>
           <DirectionsMap />
         </Grid>
-        <Grid item sm={6} style={{ width: '100%', marginTop: '1.25rem' }}>
+        <Grid item sm={6} style={{ width: '100%' }}>
           <Typography component="div">
             <HeadingText />
           </Typography>
