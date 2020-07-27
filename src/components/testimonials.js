@@ -2,7 +2,6 @@ import React from 'react';
 import useTestimonialData from '../hooks/use-testimonial-data';
 
 import { makeStyles, ListItem, Card } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
@@ -11,6 +10,9 @@ import ResponsiveHeading from './utils/responsive-heading';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: theme.spacing(2),
+  },
+  listRoot: {
     width: '100%',
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -25,9 +27,9 @@ const useStyles = makeStyles((theme) => ({
   item: {
     maxWidth: '42ch',
     padding: theme.spacing(3),
+    marginLeft: 'auto',
+    marginRight: 'auto',
     [theme.breakpoints.down('md')]: {
-      marginLeft: 'auto',
-      marginRight: 'auto',
       marginBottom: theme.spacing(2),
     },
     [theme.breakpoints.up('md')]: {
@@ -43,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Testimonials = (props) => {
   const classes = useStyles();
-  const theme = useTheme();
 
   // Pull data from each each node, and place into testimonialData array
   const testimonialData = [];
@@ -51,14 +52,14 @@ const Testimonials = (props) => {
     testimonialData.push(node.testimonial),
   );
   return (
-    <section style={{ marginTop: theme.spacing(2) }}>
+    <section className={classes.root}>
       <ResponsiveHeading style={{ textAlign: 'center' }}>
         Why us? Why now?
       </ResponsiveHeading>
-      <List className={classes.root}>
+      <List className={classes.listRoot}>
         {testimonialData.map((testimonial, i) => (
           <React.Fragment key={i}>
-            <ListItem alignItems="flex-start">
+            <ListItem>
               <Card className={classes.item}>
                 <ListItemText
                   primary={
