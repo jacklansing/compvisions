@@ -20,6 +20,7 @@ const ResponsiveHeading = ({
   component = 'h1',
   primary = 'h2',
   mobile = 'h4',
+  className,
   ...props
 }) => {
   const classes = useStyles();
@@ -28,7 +29,7 @@ const ResponsiveHeading = ({
       <Typography
         component={component}
         variant={primary}
-        className={classes.desktop}
+        className={[classes.desktop, className].join(' ')}
         {...props}
       >
         {children}
@@ -37,7 +38,7 @@ const ResponsiveHeading = ({
         component={component}
         variant={mobile}
         {...props}
-        className={classes.mobile}
+        className={[classes.mobile, className].join(' ')}
       >
         {children}
       </Typography>

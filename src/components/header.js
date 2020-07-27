@@ -6,7 +6,6 @@ const Header = ({ siteTitle, showSearch }) => (
   <header
     style={{
       background: `rebeccapurple`,
-      // marginBottom: `1.45rem`,
       marginBottom: `0.45rem`,
     }}
   >
