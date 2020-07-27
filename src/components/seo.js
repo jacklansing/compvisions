@@ -43,11 +43,6 @@ function SEO({ description, lang, meta, title }) {
           name: `theme-color`,
           content: `#314e88`,
         },
-        { name: `apple-mobile-web-app-capable`, content: `yes` },
-        {
-          name: `apple-mobile-web-app-status-bar-style`,
-          content: `#314e88`,
-        },
         {
           property: `og:title`,
           content: title,

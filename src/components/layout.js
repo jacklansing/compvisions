@@ -29,6 +29,12 @@ const useStyles = makeStyles((theme) => ({
     a: {
       color: theme.palette.primary.dark,
     },
+    h2: {
+      // For mdx files using h2
+      [theme.breakpoints.down('md')]: {
+        ...theme.typography.h6,
+      },
+    },
   },
 }));
 
