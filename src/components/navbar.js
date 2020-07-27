@@ -200,7 +200,12 @@ function NavBar({ siteTitle, showSearch = true }) {
             <MenuIcon />
           </IconButton>
           <FullMoonIcon className={classes.titleIcon} />
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            component="h4"
+            noWrap
+          >
             {siteTitle}
           </Typography>
           {classicNav()}

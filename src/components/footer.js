@@ -73,7 +73,9 @@ const Footer = (props) => {
     <footer className={classes.root}>
       <div className={classes.container}>
         <Typography component="div" className={classes.child}>
-          <Typography variant="h6">Computer Visions</Typography>
+          <Typography variant="h6" component="h3">
+            Computer Visions
+          </Typography>
           <nav>
             <ul className={classes.bottomNav}>
               <li>
@@ -98,7 +100,9 @@ const Footer = (props) => {
           </nav>
         </Typography>
         <Typography component="div" className={classes.child}>
-          <Typography variant="h6">Contact Us</Typography>
+          <Typography variant="h6" component="h3">
+            Contact Us
+          </Typography>
           <p>
             16 Corporate Woods Boulevard
             <br />
