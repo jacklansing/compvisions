@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { navigate, Link } from 'gatsby';
-
+import CompanyLogo from '../images/cv_logo.png';
 import NavBarDrawer from './navbar-drawer';
-import { FullMoonIcon } from './utils/svg-icons';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -33,11 +32,19 @@ const useStyles = makeStyles((theme) => ({
     },
     textTransform: 'uppercase',
   },
-  titleIcon: {
-    marginRight: theme.spacing(1),
-    visibility: 'hidden',
+  companyLogo: {
+    display: 'none',
     [theme.breakpoints.up('sm')]: {
-      visibility: 'visible',
+      display: 'block',
+      height: '75px',
+      borderRadius: '4px',
+      margin: theme.spacing(0.5),
+    },
+  },
+  navContainer: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+      marginLeft: 'auto',
     },
   },
   search: {
@@ -199,30 +206,28 @@ function NavBar({ siteTitle, showSearch = true }) {
           >
             <MenuIcon />
           </IconButton>
-          <FullMoonIcon className={classes.titleIcon} />
-          <Typography
-            className={classes.title}
-            variant="h6"
-            component="h4"
-            noWrap
-          >
-            {siteTitle}
-          </Typography>
-          {classicNav()}
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          <img
+            src={CompanyLogo}
+            className={classes.companyLogo}
+            alt="computer visions company logo"
+          />
+          <div className={classes.navContainer}>
+            {classicNav()}
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search Classes.."
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search classes' }}
+                onKeyPress={(e) => handleSearch(e)}
+                disabled={!showSearch}
+              />
             </div>
-            <InputBase
-              placeholder="Search Classes.."
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search classes' }}
-              onKeyPress={(e) => handleSearch(e)}
-              disabled={!showSearch}
-            />
           </div>
         </Toolbar>
       </AppBar>
