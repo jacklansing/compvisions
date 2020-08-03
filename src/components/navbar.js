@@ -101,7 +101,16 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
+      width: '14ch',
+    },
+    '@media (min-width: 1500px)': {
       width: '16ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+    [theme.breakpoints.up('xl')]: {
+      width: '18ch',
       '&:focus': {
         width: '22ch',
       },
