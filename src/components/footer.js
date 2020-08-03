@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
+
 import { IconButton, makeStyles, Typography } from '@material-ui/core';
+
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';

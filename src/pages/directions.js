@@ -6,8 +6,7 @@ import DirectionsMap from '../components/directions-map';
 import HeadingText from '../data/pages/directions/heading-text.mdx';
 import DirectionsPageContent from '../data/pages/directions/directions.mdx';
 
-import { Grid, Paper, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Grid, Paper, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grid: {

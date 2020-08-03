@@ -1,12 +1,16 @@
 import React from 'react';
-import useTestimonialData from '../hooks/use-testimonial-data';
 
-import { makeStyles, ListItem, Card } from '@material-ui/core';
-import List from '@material-ui/core/List';
-import ListItemText from '@material-ui/core/ListItemText';
-import Typography from '@material-ui/core/Typography';
-import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import ResponsiveHeading from './utils/responsive-heading';
+import useTestimonialData from '../hooks/use-testimonial-data';
+import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
+import {
+  makeStyles,
+  ListItem,
+  Card,
+  List,
+  ListItemText,
+  Typography,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {

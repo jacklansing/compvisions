@@ -1,11 +1,9 @@
 import React from 'react';
-import ResponsiveHeading from '../components/utils/responsive-heading';
-
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { makeStyles } from '@material-ui/core/styles';
-import { Paper } from '@material-ui/core';
+import ResponsiveHeading from '../components/utils/responsive-heading';
+import { Paper, makeStyles } from '@material-ui/core';
 
 const usePartnerLogos = () =>
   useStaticQuery(graphql`

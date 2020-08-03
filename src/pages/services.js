@@ -8,9 +8,14 @@ import ServicesPageContent from '../data/pages/services/services.mdx';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import {
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+  Grid,
+  Paper,
+  Typography,
+} from '@material-ui/core';
 
 const useServicesImage = () =>
   useStaticQuery(graphql`

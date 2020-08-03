@@ -1,15 +1,17 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import IconButton from '@material-ui/core/IconButton';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Divider from '@material-ui/core/Divider';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
-// Icons
+import {
+  Typography,
+  Drawer,
+  List,
+  IconButton,
+  ListItem,
+  ListItemIcon,
+  Divider,
+  ClickAwayListener,
+  makeStyles,
+} from '@material-ui/core';
+
 import HomeIcon from '@material-ui/icons/Home';
 import EventIcon from '@material-ui/icons/Event';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -17,6 +19,7 @@ import BusinessIcon from '@material-ui/icons/Business';
 import ComputerIcon from '@material-ui/icons/Computer';
 import RoomIcon from '@material-ui/icons/Room';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 const useStyles = makeStyles({
   list: {
@@ -85,6 +88,12 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
                   <HomeWorkIcon />
                 </ListItemIcon>
                 Remote Learning
+              </ListItemLink>
+              <ListItemLink href="/docs/current_schedule.pdf">
+                <ListItemIcon>
+                  <PictureAsPdfIcon />
+                </ListItemIcon>
+                Current Schedule
               </ListItemLink>
             </List>
           </div>

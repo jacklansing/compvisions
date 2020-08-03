@@ -8,9 +8,14 @@ import RemoteLearningPageContent from '../data/pages/remote-learning/remote-lear
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { Grid, Paper, Typography } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+  Grid,
+  Paper,
+  Typography,
+} from '@material-ui/core';
 
 const useRemoteLearningImage = () =>
   useStaticQuery(graphql`

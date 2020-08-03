@@ -1,10 +1,10 @@
 import React from 'react';
+
+import CarouselBackground from '../data/pages/index/carousel_bg.jpg';
 import useCarouselData from '../hooks/use-carousel-data';
 
 import Carousel from 'react-material-ui-carousel';
-import { Paper, Typography } from '@material-ui/core';
-import CarouselBackground from '../data/pages/index/carousel_bg.jpg';
-import { Button, makeStyles } from '@material-ui/core';
+import { Paper, Typography, Button, makeStyles } from '@material-ui/core';
 
 const HomeCarousel = (props) => {
   // Pull data from each each node, and place into carouselData array
