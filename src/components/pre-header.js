@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexFlow: 'row nowrap',
+    marginBottom: theme.spacing(1),
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
