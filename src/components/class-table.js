@@ -44,7 +44,7 @@ const ClassTable = ({ redirectSearch = '' }) => {
       title: 'Outline',
       field: 'outline',
       render: (rowData) => (
-        <a href={rowData.outline} target="_blank" rel="noreferrer">
+        <a href={`/docs/${rowData.outline}`} target="_blank">
           View Class Outline
         </a>
       ),
