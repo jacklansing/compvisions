@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { navigate, Link } from 'gatsby';
 import CompanyLogo from '../images/cv_logo.png';
+import { NewYorkIcon } from '../components/utils/svg-icons';
 import NavBarDrawer from './navbar-drawer';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -39,6 +40,25 @@ const useStyles = makeStyles((theme) => ({
       height: '75px',
       borderRadius: '4px',
       margin: theme.spacing(0.5),
+    },
+  },
+  secondaryLogo: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      display: 'flex',
+      flexFlow: 'row nowrap',
+      alignItems: 'center',
+      justifyContent: 'center',
+      '& svg': {
+        minWidth: '30px',
+      },
+      '& div': {
+        maxWidth: '35ch',
+        '@media (max-width: 1400px)': {
+          maxWidth: '20ch',
+        },
+      },
     },
   },
   navContainer: {
@@ -211,6 +231,16 @@ function NavBar({ siteTitle, showSearch = true }) {
             className={classes.companyLogo}
             alt="computer visions company logo"
           />
+          <Typography
+            component="div"
+            variant="subtitle2"
+            className={classes.secondaryLogo}
+          >
+            <NewYorkIcon />
+            <div>
+              A New York State Certified Woman-Owned Business Enterprise
+            </div>
+          </Typography>
           <div className={classes.navContainer}>
             {classicNav()}
             <div className={classes.search}>

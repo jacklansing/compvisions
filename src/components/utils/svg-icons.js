@@ -10,6 +10,7 @@ import TrainingAtYourLocation from '../../images/svgicons/training_at_your_locat
 import ClassSize from '../../images/svgicons/class_size.svg';
 import HelpDeskFree from '../../images/svgicons/help_desk_free.svg';
 import TrainingGuarantee from '../../images/svgicons/training_guarantee.svg';
+import NewYork from '../../images/svgicons/new_york.svg';
 
 // Helps these icons to behave when passed as a prop to a
 // React Component used inside MDX
@@ -52,4 +53,8 @@ export function HelpDeskFreeIcon() {
 
 export function TrainingGuaranteeIcon() {
   return <TrainingGuarantee />;
+}
+
+export function NewYorkIcon() {
+  return <NewYork />;
 }
