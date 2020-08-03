@@ -190,27 +190,27 @@ function NavBar({ siteTitle, showSearch = true }) {
           </Link>
         </li>
         <li>
-          <Link activeClassName={classes.activeLink} to="/classes">
+          <Link activeClassName={classes.activeLink} to="/classes/">
             Classes
           </Link>
         </li>
         <li>
-          <Link activeClassName={classes.activeLink} to="/consulting">
+          <Link activeClassName={classes.activeLink} to="/consulting/">
             Consulting
           </Link>
         </li>
         <li>
-          <Link activeClassName={classes.activeLink} to="/services">
+          <Link activeClassName={classes.activeLink} to="/services/">
             Services
           </Link>
         </li>
         <li>
-          <Link activeClassName={classes.activeLink} to="/directions">
+          <Link activeClassName={classes.activeLink} to="/directions/">
             Directions
           </Link>
         </li>
         <li>
-          <Link activeClassName={classes.activeLink} to="/remote-learning">
+          <Link activeClassName={classes.activeLink} to="/remote-learning/">
             Remote Learning
           </Link>
         </li>
