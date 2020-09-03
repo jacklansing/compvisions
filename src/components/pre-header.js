@@ -64,7 +64,7 @@ const PreHeader = (props) => {
         color="primary"
         variant="contained"
         size="medium"
-        href="/docs/current_schedule.pdf"
+        href="/docs/Computer_Visions_Current_Schedule.pdf"
         target="_blank"
         className={classes.buttonLink}
       >
