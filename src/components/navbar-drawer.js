@@ -89,7 +89,7 @@ const NavBarDrawer = ({ drawerOpen, handleDrawerClose }) => {
                 </ListItemIcon>
                 Remote Learning
               </ListItemLink>
-              <ListItemLink href="/docs/current_schedule.pdf">
+              <ListItemLink href="/docs/Computer_Visions_Current_Schedule.pdf">
                 <ListItemIcon>
                   <PictureAsPdfIcon />
                 </ListItemIcon>
